@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Angularhttp_oct';
-  constructor(private http: HttpClient) {}
+  constructor(private client: HttpClient) {}
 
   fakeAPIURL = 'https://jsonplaceholder.typicode.com/todos'; // i need to get the response from this api
 
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   //get all students
   fetchData() {
     // i want to provide my identity to the api header for provide my self 
-    this.http
+    this.client
       .get(this.myLocalfakeAPIURL, {
         // headers: {
         //   MyIdentity: 'MadanMohanReddy',
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
     let id = +element.value; // to get the value from i
     let GetStudentsByIDURL = `http://localhost:3000/Students/${id}`; // json server url
     //:id --> 1 , 2 , 3 , 4 , 5
-    this.http.get(GetStudentsByIDURL).subscribe((response) => {
+    this.client.get(GetStudentsByIDURL).subscribe((response) => {
       //console.log(response);
 
       let Stuents = [];
@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
     //Post
 
     //post for send the record to the server for insertion
-    this.http.post(addURL, newStudent).subscribe((response) => {
+    this.client.post(addURL, newStudent).subscribe((response) => {
       console.log(response);
       alert('New Student Added Successfully');
       //this.fetchData(); // to refresh the table data
@@ -90,7 +90,7 @@ export class AppComponent implements OnInit {
 
   DeleteStudent(inputelement: HTMLInputElement) {
     let Id = +inputelement.value;
-    this.http
+    this.client
       .delete(`http://localhost:3000/Students/${Id}`)
       .subscribe((response) => {
         console.log(response);
@@ -123,7 +123,7 @@ export class AppComponent implements OnInit {
       course:'Geology',
     };
 
-    this.http.put(url, body).subscribe((response) => {
+    this.client.put(url, body).subscribe((response) => {
       console.log(response);
       alert('Student Record Updated Successfully');
       //this.fetchData(); // to refresh the table data
@@ -138,7 +138,7 @@ export class AppComponent implements OnInit {
       course: 'Physics',
     };
 
-    this.http.patch(url, body).subscribe((response) => {
+    this.client.patch(url, body).subscribe((response) => {
       console.log(response);
       alert('Student Record Patched Successfully');
       //this.fetchData(); // to refresh the table data
