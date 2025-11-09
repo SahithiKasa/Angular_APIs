@@ -7,22 +7,16 @@
       "id": "1"
     },
     {
+      "name": "Sahithi",
+      "age": 13,
+      "course": "Artificial Intelligence",
+      "id": "3"
+    },
+    {
       "id": "2",
       "name": "Jane Smith",
       "age": 24,
       "course": "Physics"
-    },
-    {
-      "id": "3",
-      "name": "Sam Brown",
-      "age": 21,
-      "course": "Physics"
-    },
-    {
-      "id": "4",
-      "name": "Emily Davis",
-      "age": 23,
-      "course": "Information Technology"
     },
     {
       "id": "5",
@@ -47,6 +41,12 @@
       "name": "William Taylor",
       "age": 24,
       "course": "Cloud Computing"
+    },
+    {
+      "id": "11",
+      "name": "Madan mohan",
+      "age": 22,
+      "course": "Hindi"
     }
   ]
 }
