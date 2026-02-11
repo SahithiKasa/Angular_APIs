@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
  // i want to prepare my own apis as i want to learn not only get , but also post , put , delete , patch
   myLocalfakeAPIURL     = "http://localhost:3000/Students"  // json server url
 
- 
+
 
   data:any = [] ;
 
@@ -51,15 +51,15 @@ export class AppComponent implements OnInit {
     //:id --> 1 , 2 , 3 , 4 , 5
     this.http.get(GetStudentsByIDURL).subscribe((response) => {
           //console.log(response);
-         
+
              let Stuents = [];
              Stuents.push(response); // pushing object into array
           //setTimeout(() => {
-             this.data = Stuents;  
+             this.data = Stuents;
              this.showTableData = true;
           //}, 1000);
 
-         
+
       })
     //console.log(id);
 
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 
 //Add new student
 AddStudent(){
-    
+
     let newStudent = {
       id: "11",
       name: "Madan mohan",

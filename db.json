@@ -7,12 +7,6 @@
       "course": "Computer Science"
     },
     {
-      "id": "2",
-      "name": "Jane Smith",
-      "age": 24,
-      "course": "Mathematics"
-    },
-    {
       "id": "3",
       "name": "Sam Brown",
       "age": 21,
@@ -47,6 +41,18 @@
       "name": "William Taylor",
       "age": 24,
       "course": "Cloud Computing"
+    },
+    {
+      "id": "11",
+      "name": "Madan mohan",
+      "age": 22,
+      "course": "Hindi"
+    },
+    {
+      "id": "11",
+      "name": "Madan mohan",
+      "age": 22,
+      "course": "Hindi"
     },
     {
       "id": "11",
